@@ -30,7 +30,7 @@ html {
 #game_background {
     width: auto;
     height: 50vw;
-    background-image: url(./assets/sky.svg);
+    background-image: url(./my_assets/sky.svg);
     background-size: 100%;
     background-repeat: no-repeat;
 }
@@ -50,7 +50,7 @@ html {
     width: 550vw;
     height: 37vw;
     min-height: 37vw;
-    background-image: url(./assets/skyline3.svg);
+    background-image: url(./my_assets/skyline3.svg);
     background-size: 100%;
     background-repeat: repeat-x;
     position: absolute;
@@ -68,7 +68,7 @@ html {
 }
 
 #devil_sprite {
-    background-image: url(./assets/party_devil_main.svg);
+    background-image: url(./my_assets/party_devil_main.svg);
     height: 100%;
     width: 100%;
     background-size: contain;
@@ -93,7 +93,7 @@ html {
 
 #wheel_1,
 #wheel_2 {
-    background-image: url(./assets/wheel.svg);
+    background-image: url(./my_assets/wheel.svg);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -126,13 +126,13 @@ html {
 #tallboy_sprite {
     width: 5vw;
     height: 8.7vw;
-    background-image: url(./assets/tallboy.svg);
+    background-image: url(./my_assets/tallboy.svg);
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
 #longneck_sprite {
-    background-image: url(./assets/longneck.svg);
+    background-image: url(./my_assets/longneck.svg);
     background-size: 100%;
     width: 4vw;
     height: 11.5vw;
@@ -140,7 +140,7 @@ html {
 }
 
 #pizza_sprite {
-    background-image: url(./assets/pizza.svg);
+    background-image: url(./my_assets/pizza.svg);
     background-size: 100%;
     width: 8vw;
     height: 5.8vw;
@@ -148,7 +148,7 @@ html {
 }
 
 #zero_sprite {
-    background-image: url(./assets/00.svg);
+    background-image: url(./my_assets/00.svg);
     background-size: 100%;
     width: 5vw;
     height: 8.5vw;
@@ -156,7 +156,7 @@ html {
 }
 
 #lite_sprite {
-    background-image: url(./assets/lite.svg);
+    background-image: url(./my_assets/lite.svg);
     background-size: 100%;
     width: 4vw;
     height: 11.3vw;
@@ -164,7 +164,7 @@ html {
 }
 
 #nun_sprite {
-    background-image: url(./assets/nun.svg);
+    background-image: url(./my_assets/nun.svg);
     background-size: 100%;
     width: 9vw;
     height: 10vw;
@@ -172,7 +172,7 @@ html {
 }
 
 #phone_sprite {
-    background-image: url(./assets/phone.svg);
+    background-image: url(./my_assets/phone.svg);
     background-size: 100%;
     width: 6vw;
     height: 12vw;
@@ -180,7 +180,7 @@ html {
 }
 
 #vinyl_sprite {
-    background-image: url(./assets/LP.svg);
+    background-image: url(./my_assets/LP.svg);
     background-size: 100%;
     width: 7.8vw;
     height: 7.8vw;
@@ -214,7 +214,7 @@ html {
 }
 
 #time_board {
-    background-image: url(./assets/time.svg);
+    background-image: url(./my_assets/time.svg);
     background-repeat: no-repeat;
     background-size: 25%;
     background-position-y: center;
@@ -245,7 +245,7 @@ html {
 }
 
 #score_board {
-    background-image: url(./assets/score.svg);
+    background-image: url(./my_assets/score.svg);
     background-repeat: no-repeat;
     background-size: 25%;
     background-position-y: center;
@@ -279,7 +279,7 @@ html {
     height: 105%;
     top: 0vw;
     left: 0vw;
-    background-image: url(./assets/deluxe_title.svg);
+    background-image: url(./my_assets/deluxe_title.svg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position-x: center;
@@ -287,7 +287,7 @@ html {
 
 #play_button {
     position: absolute;
-    background-image: url(./assets/play_1.svg);
+    background-image: url(./my_assets/play_1.svg);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position-x: center;
@@ -299,7 +299,7 @@ html {
 
 #instructions_button {
     position: absolute;
-    background-image: url(./assets/instructions_1.svg);
+    background-image: url(./my_assets/instructions_1.svg);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position-x: center;
@@ -359,7 +359,7 @@ h2 {
 }
 
 #down_arrow {
-    background-image: url(./assets/down_arrow.svg);
+    background-image: url(./my_assets/down_arrow.svg);
     background-size: 100%;
     background-repeat: no-repeat;
     width: 6vw;
@@ -443,7 +443,7 @@ figcaption {
 
 #start_game_button {
     margin-top: 2vw;
-    background-image: url(./assets/lets_go.svg);
+    background-image: url(./my_assets/lets_go.svg);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position-x: center;
@@ -470,7 +470,7 @@ figcaption {
 }
 
 #try_again {
-    background-image: url(./assets/try_again_1.svg);
+    background-image: url(./my_assets/try_again_1.svg);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position-x: center;
@@ -494,7 +494,7 @@ figcaption {
 }
 
 #play_again {
-    background-image: url(./assets/play_again.svg);
+    background-image: url(./my_assets/play_again.svg);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position-x: center;
@@ -505,35 +505,35 @@ figcaption {
 }
 
 .threeLives {
-    background-image: url(./assets/threeLives.svg);
+    background-image: url(./my_assets/threeLives.svg);
     height: 5vw;
     background-size: 100%;
     background-repeat: no-repeat;
 }
 
 .twoLives {
-    background-image: url(./assets/twoLives.svg);
+    background-image: url(./my_assets/twoLives.svg);
     height: 5vw;
     background-size: 100%;
     background-repeat: no-repeat;
 }
 
 .oneLife {
-    background-image: url(./assets/oneLife.svg);
+    background-image: url(./my_assets/oneLife.svg);
     height: 5vw;
     background-size: 100%;
     background-repeat: no-repeat;
 }
 
 .noLives {
-    background-image: url(./assets/noLives.svg);
+    background-image: url(./my_assets/noLives.svg);
     height: 5vw;
     background-size: 100%;
     background-repeat: no-repeat;
 }
 
 .soundOn {
-    background-image: url(./assets/sound.svg);
+    background-image: url(./my_assets/sound.svg);
     width: 3vw;
     height: 3vw;
     background-size: 100%;
@@ -541,7 +541,7 @@ figcaption {
 }
 
 .soundOff {
-    background-image: url(./assets/muted.svg);
+    background-image: url(./my_assets/muted.svg);
     width: 3vw;
     height: 3vw;
     background-size: 100%;
