@@ -1,0 +1,3 @@
+import CSS, adapt sizing - look at portfolio
+import javascript
+move to within portfolio project

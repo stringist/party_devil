@@ -1,0 +1,796 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu&display=swap');
+@import url("https://use.typekit.net/ibg8ikl.css");
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@100;200;300;400;500&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    /* display: none; */
+    background: #333;
+}
+
+#screen {
+    position: relative;
+    margin: 5vw auto;
+    grid-area: game;
+    width: 64vw;
+    height: 36vw;
+    border: 4px black solid;
+    overflow: hidden;
+    /* background-color: rgb(36, 3, 58); */
+}
+
+#game {
+    width: 100%;
+    height: 100%;
+}
+
+#game_background {
+    width: auto;
+    height: 50vw;
+    background-image: url(./assets/sky.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#back_container {
+    position: absolute;
+    /* top: 0vw; */
+    bottom: 0vw;
+    left: 0vw;
+    height: 100%;
+    width: 100%;
+    border: 1px;
+    /* border: 1px red solid; */
+}
+
+#skyline {
+    width: 550vw;
+    height: 37vw;
+    min-height: 37vw;
+    background-image: url(./assets/skyline3.svg);
+    background-size: 100%;
+    background-repeat: repeat-x;
+    position: absolute;
+    /* border: 1px red solid; */
+}
+
+#devil_container {
+    position: absolute;
+    top: 2vw;
+    left: 2vw;
+    width: 15vw;
+    height: 29vw;
+    z-index: 0;
+    /* border: 1px red solid; */
+}
+
+#devil_sprite {
+    background-image: url(./assets/party_devil_main.svg);
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#wheel_container_1 {
+    position: absolute;
+    top: 28.3vw;
+    left: 5.5vw;
+    height: 2.5vw;
+    width: 2.5vw;
+}
+
+#wheel_container_2 {
+    position: absolute;
+    top: 28.3vw;
+    left: 12.3vw;
+    height: 2.5vw;
+    width: 2.5vw;
+}
+
+#wheel_1,
+#wheel_2 {
+    background-image: url(./assets/wheel.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 2.5vw;
+    height: 2.5vw;
+}
+
+#game_sprites {
+    width: 100%;
+    height: 100%;
+}
+
+#container1,
+#container2,
+#container3,
+#container4,
+#container5,
+#container6,
+#container7,
+#container8 {
+    position: absolute;
+    /* border: 1px red solid; */
+}
+
+#container2,
+#container5 {
+    width: 6vw;
+}
+
+#tallboy_sprite {
+    width: 5vw;
+    height: 8.7vw;
+    background-image: url(./assets/tallboy.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#longneck_sprite {
+    background-image: url(./assets/longneck.svg);
+    background-size: 100%;
+    width: 4vw;
+    height: 11.5vw;
+    background-repeat: no-repeat;
+}
+
+#pizza_sprite {
+    background-image: url(./assets/pizza.svg);
+    background-size: 100%;
+    width: 8vw;
+    height: 5.8vw;
+    background-repeat: no-repeat;
+}
+
+#zero_sprite {
+    background-image: url(./assets/00.svg);
+    background-size: 100%;
+    width: 5vw;
+    height: 8.5vw;
+    background-repeat: no-repeat;
+}
+
+#lite_sprite {
+    background-image: url(./assets/lite.svg);
+    background-size: 100%;
+    width: 4vw;
+    height: 11.3vw;
+    background-repeat: no-repeat;
+}
+
+#nun_sprite {
+    background-image: url(./assets/nun.svg);
+    background-size: 100%;
+    width: 9vw;
+    height: 10vw;
+    background-repeat: no-repeat;
+}
+
+#phone_sprite {
+    background-image: url(./assets/phone.svg);
+    background-size: 100%;
+    width: 6vw;
+    height: 12vw;
+    background-repeat: no-repeat;
+}
+
+#vinyl_sprite {
+    background-image: url(./assets/LP.svg);
+    background-size: 100%;
+    width: 7.8vw;
+    height: 7.8vw;
+}
+
+
+/* #game_foreground {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+} */
+
+#game_ui {
+    width: 100%;
+    height: 4.9vw;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+#score_board,
+#time_board,
+#timer {
+    width: 25vw;
+    /* border: 2px solid #333; */
+    padding-left: 1vw;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+#time_board {
+    background-image: url(./assets/time.svg);
+    background-repeat: no-repeat;
+    background-size: 25%;
+    background-position-y: center;
+    display: flex;
+    margin-left: .5vw;
+}
+
+#lives_container {
+    width: 13vw;
+    height: 4vw;
+    /* border: 2px solid #333; */
+    font-family: 'Poppins', sans-serif;
+    color: red;
+    align-items: center;
+    padding-bottom: 1vw;
+    top: -1vw;
+    background-position: center;
+}
+
+#timer {
+    width: 15vw;
+    height: 2vw;
+    border: solid 3px white;
+    border-radius: .5em;
+    margin-left: 6vw;
+    position: absolute;
+    top: 1.5vw;
+}
+
+#score_board {
+    background-image: url(./assets/score.svg);
+    background-repeat: no-repeat;
+    background-size: 25%;
+    background-position-y: center;
+    background-position-x: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    /* border: solid 1px white; */
+}
+
+#score_counter {
+    /* font-family: 'Casey'; */
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 3vw;
+    /* -webkit-text-stroke: .1vw #251036; */
+    text-shadow: -3px 0 5px #251036, 0 3px 5px #251036, 3px 0 5px #251036, 0 -3px 5px #251036;
+    align-self: baseline;
+    margin-top: .5vw;
+    margin-right: 1.5vw;
+}
+
+#mute_container {
+    position: absolute;
+    top: 1vw;
+    left: 60vw;
+}
+
+#title_screen {
+    position: absolute;
+    width: 100%;
+    height: 105%;
+    top: 0vw;
+    left: 0vw;
+    background-image: url(./assets/deluxe_title.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+#play_button {
+    position: absolute;
+    background-image: url(./assets/play_1.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    height: 4.5vw;
+    width: 15vw;
+    top: 23.2vw;
+    left: 24.5vw;
+}
+
+#instructions_button {
+    position: absolute;
+    background-image: url(./assets/instructions_1.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    height: 4.5vw;
+    width: 15vw;
+    left: 24.5vw;
+    top: 28.2vw;
+}
+
+#instructions1,
+#instructions2,
+#game_over,
+#level_complete {
+    color: white;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    top: 1.5vw;
+    left: 1.2vw;
+    width: 95%;
+    height: 90%;
+    background-color: #2d1242;
+    border: solid white .2em;
+    border-radius: 1.5em;
+}
+
+h1 {
+    font-family: 'casey', sans-serif;
+    font-size: 6vw;
+    margin-top: 1.5vw;
+    margin-bottom: 0vw;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5vw;
+    font-weight: 400;
+    letter-spacing: .05rem;
+    align-self: center;
+    text-align: center;
+}
+
+#instructions2 {
+    color: white;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: .5vw;
+    left: 1.2vw;
+    width: 95%;
+    height: 103%;
+    background-color: #2d1242;
+    border: solid white .2em;
+    border-radius: 1.5em;
+}
+
+#down_arrow {
+    background-image: url(./assets/down_arrow.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 6vw;
+    height: 5.2vw;
+    position: absolute;
+    top: 26vw;
+    left: 27vw;
+}
+
+#instructions2 h2 {
+    width: 15vw;
+}
+
+p {
+    font-family: 'Inter', sans-serif;
+    font-size: 2vw;
+    font-weight: 100;
+    line-height: 1.5em;
+    letter-spacing: .08rem;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    /* text-align: center; */
+}
+
+.objects_container {
+    display: flex;
+    align-items: baseline;
+    height: 12vw;
+    padding-bottom: .5vw;
+    margin-top: 1vw;
+    background-color: rgb(72, 21, 111);
+    padding-left: 1vw;
+    padding-right: 1vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    /* border: solid turquoise 1px; */
+    border-radius: 3vw;
+    transform: skew(-5deg);
+}
+
+#objects_container h2 {
+    transform: skew(5deg);
+}
+
+figure {
+    margin-left: auto;
+    margin-right: auto;
+    transform: skew(5deg);
+    max-height: 8vw;
+    text-align: center;
+}
+
+figure img {
+    max-height: 8vw;
+    max-width: 8vw;
+    /* border: solid green 1px; */
+}
+
+figcaption {
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    font-size: 1vw;
+    width: 8vw;
+    text-align: center;
+    margin-top: .1em;
+    /* border: solid 1px; */
+}
+
+#double {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#offset {
+    font-weight: 500;
+    padding-left: 2vw;
+    margin-right: -16vw;
+}
+
+#start_game_button {
+    margin-top: 2vw;
+    background-image: url(./assets/lets_go.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 1vw;
+    height: 8vw;
+    width: 20vw;
+    margin: auto;
+    left: 23vw;
+    /* border: solid white 1px */
+}
+
+#game_over {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    top: 1.5vw;
+    left: 3vw;
+    width: 90%;
+    height: 90%;
+    background-color: #2d1242;
+    border: solid white .2em;
+    border-radius: 1.5em;
+}
+
+#try_again {
+    background-image: url(./assets/try_again_1.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    height: 7vw;
+    width: 20vw;
+    margin: auto;
+    left: 23vw;
+}
+
+#level_complete {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    top: 1.5vw;
+    left: 3vw;
+    width: 90%;
+    height: 90%;
+    background-color: #2d1242;
+    border: solid white .2em;
+    border-radius: 1.5em;
+}
+
+#play_again {
+    background-image: url(./assets/play_again.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    height: 7vw;
+    width: 20vw;
+    margin: auto;
+    left: 23vw;
+}
+
+.threeLives {
+    background-image: url(./assets/threeLives.svg);
+    height: 5vw;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.twoLives {
+    background-image: url(./assets/twoLives.svg);
+    height: 5vw;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.oneLife {
+    background-image: url(./assets/oneLife.svg);
+    height: 5vw;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.noLives {
+    background-image: url(./assets/noLives.svg);
+    height: 5vw;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.soundOn {
+    background-image: url(./assets/sound.svg);
+    width: 3vw;
+    height: 3vw;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.soundOff {
+    background-image: url(./assets/muted.svg);
+    width: 3vw;
+    height: 3vw;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.z1 {
+    z-index: -13;
+}
+
+.z2 {
+    z-index: 1;
+}
+
+.position1 {
+    top: 2vw;
+    left: 65vw;
+}
+
+.position2 {
+    top: 5vw;
+    left: 135vw;
+}
+
+.position3 {
+    top: 9vw;
+    left: 112vw;
+}
+
+.position4 {
+    top: 12vw;
+    left: 82vw;
+}
+
+.position5 {
+    top: 15vw;
+    left: 98vw;
+}
+
+.position6 {
+    top: 20vw;
+    left: 123vw;
+}
+
+.position7 {
+    top: 23vw;
+    left: 70vw;
+}
+
+.position8 {
+    top: 2vw;
+    left: 95vw;
+}
+
+.slideUp {
+    animation: slideUp 1.5s ease-in backwards;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(40vw);
+    }
+    to {
+        transform: translateY(0vh);
+    }
+}
+
+.slideOut {
+    animation: slideOut 1.5s ease-in backwards;
+}
+
+@keyframes slideOut {
+    to {
+        transform: translateY(-40vw);
+    }
+}
+
+.fadeOut {
+    animation: fadeOut 1.5s linear;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0%;
+    }
+}
+
+.fadeIn {
+    animation: fadeIn 1s linear 1;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+.time {
+    animation: timeBar 60s both linear 1;
+    height: 3vw;
+    width: 15vw;
+    transform-origin: left;
+}
+
+@keyframes timeBar {
+    0% {
+        transform: scaleX(1) skewX(-22deg);
+        background-color: chartreuse;
+    }
+    50% {
+        transform: scaleX(0.5) skewX(-42deg);
+        background-color: orangered;
+    }
+    100% {
+        transform: scaleX(0) skewX(-82deg);
+        background-color: red;
+    }
+}
+
+.swell {
+    animation: swell 1s linear alternate-reverse;
+}
+
+@keyframes swell {
+    to {
+        transform: scale(1.2) translateY(-.5vw);
+        filter: hue-rotate(100deg) brightness(3);
+    }
+}
+
+.spin {
+    animation: spin .8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.slowRoll {
+    animation: slowRoll 8s linear infinite;
+}
+
+@keyframes slowRoll {
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+.vibrate {
+    animation: vibrate 1s linear infinite;
+}
+
+@keyframes vibrate {
+    40% {
+        transform: translateX(-1vw);
+    }
+    45% {
+        transform: translateX(2vw);
+    }
+    50% {
+        transform: translateX(-1vw);
+    }
+    55% {
+        transform: translateX(-.8vw);
+    }
+    55% {
+        transform: translateX(1.8vw);
+    }
+    55% {
+        transform: translateX(-1vw);
+    }
+    100% {
+        transform: translateX(1vw);
+    }
+}
+
+.scroll {
+    animation: scroll 90s linear infinite;
+}
+
+@keyframes scroll {
+    to {
+        transform: translateX(-450vw);
+    }
+}
+
+.moveLeft1 {
+    animation: moveLeft1 7s linear infinite;
+}
+
+@keyframes moveLeft1 {
+    to {
+        transform: translateX(-135vw);
+    }
+}
+
+.moveLeft2 {
+    animation: moveLeft2 6s linear infinite;
+}
+
+@keyframes moveLeft2 {
+    to {
+        transform: translateX(-135vw);
+    }
+}
+
+.moveLeft3 {
+    animation: moveLeft2 5s linear infinite;
+}
+
+@keyframes moveLeft3 {
+    to {
+        transform: translateX(-135vw);
+    }
+}
+
+.rotate {
+    animation: rotate .5s ease-in 2;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(-4320deg) scale(0);
+    }
+}
+
+.paused {
+    animation-play-state: paused;
+}
+
+.dim {
+    animation: dim 1s linear;
+}
+
+@keyframes dim {
+    50% {
+        filter: grayscale(100%);
+        filter: brightness(60%);
+    }
+    100% {
+        filter: brightness(20%);
+    }
+}
+
+.hidden {
+    visibility: hidden;
+}
