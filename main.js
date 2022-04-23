@@ -1,5 +1,3 @@
-import './style.css';
-
 window.addEventListener("load", start);
 let lives;
 let points;
